@@ -1,0 +1,3 @@
+[submodule "lib/presto"]
+	path = lib/presto
+	url = git@github.com:robotpony/Presto.git
