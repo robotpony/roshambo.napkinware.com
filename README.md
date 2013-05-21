@@ -4,7 +4,6 @@
 
 This is a trivially simple Roshambo AI shim. 
 
-
 ## Parts
 
 	index.php						The main UI
