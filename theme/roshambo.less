@@ -1,0 +1,225 @@
+@import "font-awesome/less/font-awesome.less";
+@import "elements.less";
+@import "globals.less";
+
+@hText: rgba(255, 255, 255, .8);
+@bgColour: rgba(0,0,0,.85);
+
+@borderColour: rgba(255, 255, 255, .95);
+
+@g1: 8px;
+@g2: @g1 * 2;
+@g3: @g1 * 3;
+
+@pageW: 800px;
+
+@headH: 42px;
+@footH: 36px;
+
+/* Page structure */
+
+body { 
+	margin: 0; padding: 0;
+	width: @pageW;
+	
+	> header, > main, > footer {
+		position: absolute; left: 0;
+		width: 100%;
+
+		> div {
+			position: relative;	
+			margin: 0 auto;
+			width: @pageW;
+		}
+	}
+	
+	> main {
+		min-height: 700px;
+	}
+	> header {
+		position: fixed; bottom: @footH;
+		height: @headH;
+	}
+	> footer {
+		position: fixed; bottom: 0;
+		height: @footH;
+	}
+}
+
+/* Page chrome */
+
+body {
+	background: @bgColour url(/theme/images/bg.png) repeat;
+	
+	font-family: "larabiefont", monospace;	
+	color: @hText;
+		
+	> main > div {
+		margin: @g3 auto; padding: 0;
+		border: @g1 solid @borderColour;
+		.rounded(@g1 * 2);
+
+		background-color: rgba(32,32,32,.75);
+		
+		> header {
+			margin: 0  0 @g2 * 2  0;
+
+			h1 {
+				font-size: 32pt;
+				padding-top: .35em;
+				
+				var.vs {
+					font-size: 14pt;
+				}
+			}
+			
+			h2 {
+				position: relative;
+				background: transparent url(/theme/images/lines.gif) repeat;
+				color: @bgColour;
+				font-size: 32pt;
+				margin: .5em 0 1.25em 0;
+				
+				var.team-a, var.team-b {
+					position: absolute;
+					width: 33%;
+					background-color: rgba(0,0,0,.75);
+					color: rgba(0,225,0,.85)
+				}
+				var.team-a {
+					left: 50px;	
+				}
+				var.team-b {
+					right: 50px;
+				}
+			}
+		}
+		
+		> section, > header {
+			h1, h2 {
+				text-align: center;	
+			}
+		}
+		
+		> section {
+			position: relative;
+			
+			nav {
+				display: block;
+				text-align: center;
+			}
+			
+			article {
+				width: 50%;
+				
+				> * {
+					display: block;
+					padding: .25em; margin: 0 .15em .25em;
+					border: @g1 solid @borderColour;
+					.rounded(@g1 * 2);
+				
+					color: rgba(255,0,0,.85);
+					text-align: center;
+					font-size: 140pt;
+					background: transparent url(/theme/images/tv-bg.png) repeat;
+					text-shadow: 1px 1px 10px rgba(0,0,0,.8);
+				}
+			}
+			
+			article.team-a {
+				float: left;
+			}
+			article.team-a {
+				float: right;
+			}
+		}
+		
+		> section.leaderboard {
+			margin-top: 2em;
+			
+			h3 {
+				background: transparent url(/theme/images/lines.gif) repeat;
+				color: @bgColour;
+				text-transform: uppercase;				
+			}
+		}
+	}
+	/* The site name header */
+	> header {
+		background-color: rgba(0, 0, 0, 1);
+		
+		h1 {
+			font-size: 16pt;
+			line-height: @headH;
+			
+			em {
+				opacity: .5;
+			}
+		}
+	}
+	/* Standard site footer */
+	> footer {
+		background: rgba(0,0,0,.25) url(/theme/images/lines.gif) repeat;
+		
+		h5 {
+			font-size: 8pt;
+			color: rgba(0,0,0,.25);
+			line-height: @footH;
+		}		
+	}
+	
+}
+
+/* Base overrides */
+
+h1, h2, h3, h4, h5 {
+	font-family: "moby-monospace", sans-serif;
+	text-align: center;
+	padding: 0; margin: 0;
+	
+	em {
+		font-family: "larabiefont", monospace;	
+		font-style: normal;
+		text-transform: uppercase;
+	}
+}
+
+nav > a, header a, footer a {
+	text-decoration: none;
+	color: @hText;
+	
+	&:focus, &:visited {
+		
+	}
+	&:hover {
+	
+	}
+	&:active {
+		
+	}
+}
+
+var {
+	font-style: normal;
+}
+
+/* UI components */
+
+main > header {
+	h1 {
+	}		 
+}
+section.leaderboard {
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		
+		th {
+			text-align: left;
+		}
+		tr:nth-child(odd) td {
+			background-color: rgba(0,0,0,.75);
+		}
+	}
+}
+
