@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php date_default_timezone_set('America/Los_Angeles'); ?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,7 +6,7 @@
 	<meta name="description" content="A simple Roshambo AI shim." />
   	<meta name="keywords" content="Roshambo, AI, contest, UOA, Alberta, Napkinware" />
 
-	<script type="text/javascript" src="http://use.typekit.com/kku6vpo.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/ugy5sum.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<link rel="stylesheet" href="/theme/roshambo.less" />
@@ -19,15 +19,52 @@
 </head>
 <?php flush(); ?><body>
 <header><div>
-	<h1><a href="/">Roshambinator <em>Rock? Paper? Scissors?</em></a></h1>
+	<h1><a href="/">roshambots <em>Rock || Paper || Scissors</em></a></h1>
 <div></header>
 
 
-<main><div>
+<main class="intro"><div>
+
+	<header><div>
+		<h1><var class="team-a name"></var> <var class="clock">v.s.</var> <var class="team-b name"></var></h1>
+	</div></header>
+
+	<section class="match"><div>
+		<var class="team-a score">515</var>
+		<nav><a href="" title=""></a></nav>
+		<var class="team-b score">33</var>
+	</div></section>
+
+	<section class="leaderboard"><div>
+		<h2>Leaderboard</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>#</th><th>bot</th><th>points</th><th>round</th><th>&#916;</th>
+				</tr>	
+			</thead>
+			
+			<tbody>
+					<td>1</td><td>dennis</td><td>2211</td><td>5</td><td>+5</td>
+					<td>1</td><td>dennis</td><td>2211</td><td>5</td><td>+5</td>
+					<td>1</td><td>dennis</td><td>2211</td><td>5</td><td>+5</td>
+			</tbody>
+		</table>
+	</div></section>
+	
+	<menu style="xdisplay: none;">
+		<li><a href="" title=""><i class=""></i></a></li>
+		<li><a href="" title=""><i class=""></i></a></li>
+		<li><a href="" title=""><i class=""></i></a></li>
+		<li><a href="" title=""><i class=""></i></a></li>
+		<li><a href="" title=""><i class=""></i></a></li>
+	</menu>
+	
 </div></main>
 
 <footer><div>
-	<p><a href="/"><?= $chronicle->settings->site->name ?></a> &mdash; COPYRIGHT &copy; 1997-<?= date('Y'); ?> BRUCE ALDERSON</p>
+	<p><a href="/">The Roshambitator</a> &mdash; COPYRIGHT &copy; <?= date('Y'); ?> BRUCE ALDERSON</p>
 </div></footer>
 
 </body>

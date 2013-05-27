@@ -1,3 +1,6 @@
 [submodule "lib/presto"]
 	path = lib/presto
 	url = git@github.com:robotpony/Presto.git
+[submodule "theme/awesome"]
+	path = theme/awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
